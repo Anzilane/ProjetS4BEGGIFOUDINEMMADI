@@ -10,13 +10,19 @@
 #include "Graph.h"
 
 int main(int argc, const char * argv[]) {
-    
-    int dim(char*fich);
-    
+
+    // int dim(char*fich);
+    // char colors[36] = {0};
+    // for (size_t i = 0; i < 6*6; i++) {
+    //     colors[i] = '*';
+    // }
+    char * colors = transformGraphToBoardOfChar(6);
+
     Graph g = CreateGraph(6);
-    replaceVertexGraph(g);
+    //replaceVertexGraph(g);
+    g = CreateBoardGraph(g, colors);
     postUpBoard(g);
-    postUpSideAdjacentGraph(g);
-    destroyGraph(g);
+    //postUpSideAdjacentGraph(g);
+    //destroyGraph(g);
     return 0;
 }
